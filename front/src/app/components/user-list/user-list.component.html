@@ -1,0 +1,37 @@
+<h2 class="text-center card-body"> User List</h2>
+<div class="container">
+  <div class="row">
+    <div class="col text-center mt-5">
+      <button class="btn btn-primary text-center" style="background-color:#890e54ff"><a routerLink="/users/adduser"> Add an user </a></button>
+    </div>
+  </div>
+
+
+  <div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Type User </th>
+            <th scope="col">Name</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Email</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td> {{user.typeUser.nametype}}</td>
+            <td> {{user.name}}</td>
+            <td> {{user.firstname}}</td>
+            <td> {{user.email}}</td>
+            <td>
+              <button class="btn me-5" [routerLink]="['/users/adduser/', user.id ]" style="background-color:#80a9beff">Edit </button>
+              <button class="btn btn-danger d-inline  text-white" (click)="deleteUser(user.id)"> Remove </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

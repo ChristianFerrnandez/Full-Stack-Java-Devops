@@ -1,0 +1,33 @@
+<h2 class="text-center card-body"> Type User List</h2>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary text-center mt-5" style="background-color:#890e54ff"><a routerLink="/typeusers/addtype"> Add type user </a></button>
+    </div>
+  </div>
+
+
+  <div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Type user</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let typeuser of typeusers">
+            <td> {{typeuser.typeid}}</td>
+            <td> {{typeuser.nametype}}</td>
+            <td>
+              <button class="btn btn-info me-5" [routerLink]="['/typeusers/addtype', typeuser.typeid]" >Edit </button>
+              <button class="btn btn-danger d-inline  text-white" (click)="deleteTypeUser(typeuser.typeid)"> Remove </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

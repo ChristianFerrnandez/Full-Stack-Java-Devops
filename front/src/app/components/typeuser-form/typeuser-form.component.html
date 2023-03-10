@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 class="text-center card-body mt-5"> Add/Edit Type User</h2>
+    <form>
+        <div class="col text-center">
+            <div class="mb-3 mt-5">
+                <label for="typeuser" class="form-label"> </label>
+                <input type="text" class="form-control text-center" name="typeuser" [(ngModel)]="typeuser.nametype"
+                    placeholder="Type User">
+            </div>
+
+            <button type="submit" class="btn" (click)="onSubmitType()" *ngIf="!typeuser.typeid" style="background-color:#890e54ff"> Submit</button>
+            <button type="submit" class="btn" (click)="updateTypeUser()" *ngIf="typeuser.typeid" style="background-color:#890e54ff"> Submit</button>
+        </div>
+    </form>
+</div>

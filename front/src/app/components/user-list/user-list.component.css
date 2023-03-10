@@ -1,0 +1,14 @@
+thead:nth-child(1) {
+  background-color: #890e54ff;
+  color: white;
+}
+
+h2 {
+  background-color: #708090ff;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none
+}
